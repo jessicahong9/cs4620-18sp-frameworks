@@ -107,6 +107,12 @@ public class AnimTimeline {
 		// 1 - Linear interpolation of quaternions,
 		// 2 - Spherical linear interpolation of quaternions.
 		
+		switch(rotation) {
+			case 0:
+			case 1:
+			case 2:
+			default: break;
+		}
 		
 	}
 }
