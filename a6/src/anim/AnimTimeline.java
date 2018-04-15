@@ -64,7 +64,13 @@ public class AnimTimeline {
 	public void removeKeyFrame(int frame, Matrix4 t) {
 		// TODO#A6: Delete a frame, you might want to use Treeset.remove
 		// If there is no frame after deletion, add back this frame.
+		AnimKeyframe f = new AnimKeyframe(frame);
+		f.transformation.set(t);
+		frames.remove(f);
 		
+		if(frames.size() == 0) {
+			frames.add(f);
+		}
 	}
 
 	
