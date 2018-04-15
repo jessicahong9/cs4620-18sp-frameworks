@@ -50,7 +50,9 @@ public class AnimTimeline {
 	 */
 	public void addKeyFrame(int frame, Matrix4 t) {
 		// TODO#A6: Add an AnimKeyframe to frames and set its transformation
-		
+		AnimKeyframe f = new AnimKeyframe(frame);
+		f.transformation.set(t);
+		frames.add(f);
 	}
 	/**
 	 * Remove a keyframe from the timeline.  If the timeline is empty,
